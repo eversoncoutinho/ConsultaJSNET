@@ -91,5 +91,5 @@ function outsideClick(e) {
 
 //Acionamentos
 $('#closemodal').click(closeModal);
-$('.closemodal').click(closeModal);
+$('.close').click(closeModal);
 window.addEventListener("click", outsideClick);
