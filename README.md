@@ -1,3 +1,22 @@
+*Como popular o banco de dados com os valores de {email,telemovel,telefoneTrabalho,dataNascimento} para teste:*
+1- add migration popular
+2- acrescente na migration criada a linha a seguir:
+
+protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.Sql("Insert into Clientes(email,telemovel,telefone,nascimento) " +
+                "Values ('pedro@gmail.com',934925445,40151469,'1989/09/24')");
+            migrationBuilder.Sql("Insert into Clientes(email,telemovel,telefone,nascimento) " +
+                               "Values ('maria@gmail.com',934924445,13151469,'1981/09/27')");
+
+            migrationBuilder.Sql("Insert into Clientes(email,telemovel,telefone,nascimento) " +
+                               "Values ('joao@gmail.com',943928445,23151469,'1991/09/27')");
+
+            migrationBuilder.Sql("Insert into Clientes(email,telemovel,telefone,nascimento) " +
+                                           "Values ('manoel@gmail.com',934185445,38481469,'2001/09/27')");
+
+        }
+        
 Criar uma aplicação web com os seguintes passos:
 
 Envie do frontend (JS/Jquery) o email do utilizador para um controller API.
