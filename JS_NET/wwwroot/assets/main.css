@@ -30,7 +30,6 @@ a {
     border-color: #1861ac;
 }
 
-
 html {
     font-size: 14px;
 }
@@ -63,11 +62,6 @@ button.accept-policy {
     line-height: inherit;
 }
 
-#btns {
-    display: block;
-    align-items: flex-end;
-    text-align: right;
-}
 .btnCustomY{
     background: #ffd406;
     padding: 5px 6px;
@@ -97,6 +91,7 @@ button.accept-policy {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.75);
+    left: 0;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -108,23 +103,39 @@ button.accept-policy {
     from{opacity:0}
     to{opacity:1}
 }
-
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px 5px 10px ;
+}
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 .modalcontent {
     width: 50%;
     height: 60%;
     background-color: #ffffff;
     border: 1px solid #000;
-    border-radius: 5px;
-    margin: 80px auto 0 auto;
+    border-radius: 6px;
+    margin: 90px auto 0 auto;
+    padding: 30px;
 }
 
 .modalCustom span:hover {
             color: #1b6ec2;
             transition: 350ms;
         }
-.closemodal{
+.closemodal {
+    
     float:right;
     color:blue;
+    background: red;
+    border-radius: 5px;
 }
 
 .footer {

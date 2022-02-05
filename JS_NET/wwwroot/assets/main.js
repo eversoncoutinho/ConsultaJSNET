@@ -9,26 +9,28 @@ $("#Resumo").hide();
 $(".modalCustom").hide();
 
 obterDados = function () {
+    
+    
+    let email = $("#emailInput").val();    
+    
+    if (email != "") {
+        $("#loading").html("A carregar telefones. Por favor, aguarde.");
+        $.ajax({
+            dataType: "json",
+            type: "GET",
+            url: "/Home/ObterTelefone", //busca a controller
+            data: { email: email },
+            success: function (response) {
+                $("#loading").html("");
+                obterDataNascimento(response.telemovel);
+                $("#tel").html("<p><div><b>Telemovel:</b>" + response.telemovel + "</div><div><b>Telefone Trabalho: </b>" + response.telefoneTrabalho)
+            }
+        }).done(function (msg) {
 
-    $("#loading").html("A carregar telefones. Por favor, aguarde.");
-    let email = $("#emailInput").val();
-
-    $.ajax({
-        dataType: "json",
-        type: "GET",
-        url: "/Home/ObterTelefone", //busca a controller
-        data: { email: email },
-        success: function (response) {
-            $("#loading").html("");
-            obterDataNascimento(response.telemovel);
-            $("#tel").html("<p><div><b>Telemovel:</b>" + response.telemovel + "</div><div><b>Telefone Trabalho: </b>" + response.telefoneTrabalho)
-        }
-    }).done(function (msg) {
-
-    }).fail(function (jqXHR, textStatus, msg) {
-        alert(msg);
-    })
-  
+        }).fail(function (jqXHR, textStatus, msg) {
+            alert(msg);
+        })
+    } else { $("#loading").html("Email obrigatório");}
 };
 
 obterDataNascimento = function (telemovel) {
@@ -91,5 +93,5 @@ function outsideClick(e) {
 
 //Acionamentos
 $('#closemodal').click(closeModal);
-$('.closemodal').click(closeModal);
+$('.close').click(closeModal);
 window.addEventListener("click", outsideClick);
