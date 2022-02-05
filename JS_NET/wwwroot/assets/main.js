@@ -1,8 +1,6 @@
 ﻿//modal
 let modal = document.getElementById('resumoCustom');
-
 let email = $('#emailInput').val(); //pega o valor da id Email
-
 let btnClosemodal = document.getElementById('closemodal');
 
 $("#Resumo").hide();
