@@ -74,3 +74,4 @@ C:\Users\everson\source\repos\JQCSharpAPI\JS_NET\obj\Debug\netcoreapp3.1\JS_NET.
 C:\Users\everson\source\repos\JQCSharpAPI\JS_NET\obj\Debug\netcoreapp3.1\JS_NET.dll
 C:\Users\everson\source\repos\JQCSharpAPI\JS_NET\obj\Debug\netcoreapp3.1\JS_NET.pdb
 C:\Users\everson\source\repos\JQCSharpAPI\JS_NET\obj\Debug\netcoreapp3.1\JS_NET.genruntimeconfig.cache
+C:\Users\everson\source\repos\JQCSharpAPI\JS_NET\obj\Debug\netcoreapp3.1\JS_NET.csproj.AssemblyReference.cache

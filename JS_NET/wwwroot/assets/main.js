@@ -58,6 +58,7 @@ obterResumo = function () {
         dataType: "json",
         type: "GET",
         url: "/Home/ObterResumo",
+        data: { email: email },//dado passado
         success: function (response) {
 
             $("#emailSpan").html(email);

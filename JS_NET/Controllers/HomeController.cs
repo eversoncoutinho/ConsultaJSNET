@@ -22,8 +22,6 @@ namespace JS_NET.Controllers
             _context = context;
         }
 
-        int x = 5;
-        int y = 10;
         public IActionResult Index()
         {
             return View();
@@ -79,26 +77,35 @@ namespace JS_NET.Controllers
             }
             return NotFound();
         }
-        
+
 
         [HttpGet]
-        public JsonResult ObterResumo()
+        public IActionResult ObterResumo(string email)
         {
             //var deplay = new Random().Next(x, y) * 1000;
             //Thread.Sleep(deplay);
+            if (email == null)
+            {
+                return NotFound();
+            }
+            var resumoQ = (from c in _context.Clientes
+                           where c.email == email
+                           select c);
 
-
-            //idade
-            CultureInfo culture = new CultureInfo("pt-pt");
-            DateTime datanascimento = Convert.ToDateTime("27/09/1981", culture);
-            DateTime today = DateTime.Now;
-
-//            DateTime datanascimento = new DateTime(datanasciment);
-            TimeSpan idadeDays = today.Subtract(datanascimento); // 127.04:15:10
-            int idade = (int)(idadeDays.TotalDays)/365;            
-            var result = new { telemovel = "+351934924529", telefoneTrabalho = "+351211123456", idade=$"{idade}" };
-            
-            return Json(result);
+            if (resumoQ != null)
+            {
+                foreach (var c in resumoQ)
+                {
+                    CultureInfo culture = new CultureInfo("pt-pt");
+                    DateTime datanascimento = Convert.ToDateTime(c.nascimento, culture);
+                    DateTime today = DateTime.Now;
+                    TimeSpan idadeDays = today.Subtract(datanascimento); // 127.04:15:10
+                    int idade = (int)(idadeDays.TotalDays) / 365;
+                    var result = new { telemovel = c.telemovel, telefoneTrabalho = c.telefone, idade = $"{idade}" };
+                    return new JsonResult(result);
+                }
+            }
+            return NotFound();
         }
 
         public IActionResult Error()
