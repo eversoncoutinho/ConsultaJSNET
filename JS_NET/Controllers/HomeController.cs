@@ -11,8 +11,8 @@ namespace JS_NET.Controllers
 
     public class HomeController : Controller
     {
-        int x = 0;
-        int y = 1;
+        int x = 5;
+        int y = 10;
         public IActionResult Index()
         {
             return View();
