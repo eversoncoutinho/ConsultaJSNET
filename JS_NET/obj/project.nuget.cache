@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zgEWlP3vtEPLpCbDH1697a36hIHf3PmAkXlYIWIdx/zWVK9u6iYlsibQMmCU2TZUNv0zkwvdUkZ1G0mxvAr/wg==",
+  "dgSpecHash": "m0IHP3OXgP2ulbRJDDYD6BX/drQpudee4BQshZOF/eeTGqVua8K0XKIXBhaeLvviI7LrD5C9StHyo2w7kbAPlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\everson\\source\\repos\\JQCSharpAPI\\JS_NET\\JS_NET.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\everson\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
