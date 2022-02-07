@@ -6,6 +6,28 @@
       "enabled": true,
       "renameLocals": true
     }
+  },
+
+  {
+    "outputFileName": "wwwroot/assets/main.min.js",
+    "inputFiles": [
+      "wwwroot/assets_develop/main.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+
+  {
+    "outputFileName": "wwwroot/assets/lib.min.js",
+    "inputFiles": [
+      "wwwroot/assets_develop/jquery.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
   }
 
 ]
