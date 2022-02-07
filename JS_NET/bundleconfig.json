@@ -5,6 +5,7 @@
     "minify": {
       "enabled": true,
       "renameLocals": true
+       
     }
   },
 
@@ -15,7 +16,8 @@
     ],
     "minify": {
       "enabled": true,
-      "renameLocals": true
+      "renameLocals": true,
+        "preserveImportantComments": false
     }
   },
 
@@ -26,7 +28,9 @@
     ],
     "minify": {
       "enabled": true,
-      "renameLocals": true
+      "renameLocals": true,
+      "preserveImportantComments": false
+
     }
   }
 
