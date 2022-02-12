@@ -5,8 +5,9 @@
     "minify": {
       "enabled": true,
       "renameLocals": true
-       
+
     }
+    
   },
 
   {
@@ -32,6 +33,7 @@
       "preserveImportantComments": false
 
     }
+    
   }
 
 ]
