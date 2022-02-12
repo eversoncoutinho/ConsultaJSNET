@@ -1,8 +1,6 @@
 ﻿//modal
 let modal = document.getElementById('resumoCustom');
-
 let email = $('#emailInput').val(); //pega o valor da id Email
-
 let btnClosemodal = document.getElementById('closemodal');
 
 $("#Resumo").hide();
@@ -60,6 +58,7 @@ obterResumo = function () {
         dataType: "json",
         type: "GET",
         url: "/Home/ObterResumo",
+        data: { email: email },//dado passado
         success: function (response) {
 
             $("#emailSpan").html(email);
